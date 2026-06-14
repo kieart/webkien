@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CYBERARTIST | 3D Portfolio &amp; Courses</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&amp;family=Hanken+Grotesk:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&amp;family=Sora:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#93000a",
+                    "on-surface": "#e5e1e4",
+                    "surface-bright": "#39393b",
+                    "tertiary-container": "#fed639",
+                    "on-primary": "#00363a",
+                    "on-secondary": "#520072",
+                    "on-tertiary-fixed-variant": "#554500",
+                    "secondary": "#ebb2ff",
+                    "secondary-fixed-dim": "#ebb2ff",
+                    "primary": "#dbfcff",
+                    "surface-dim": "#131315",
+                    "primary-fixed": "#7df4ff",
+                    "surface-container-lowest": "#0e0e10",
+                    "on-secondary-fixed": "#320047",
+                    "on-surface-variant": "#b9cacb",
+                    "primary-container": "#00f0ff",
+                    "on-error": "#690005",
+                    "on-primary-container": "#006970",
+                    "secondary-container": "#b600f8",
+                    "on-tertiary-fixed": "#231b00",
+                    "surface": "#131315",
+                    "on-primary-fixed-variant": "#004f54",
+                    "surface-container-highest": "#353437",
+                    "surface-tint": "#00dbe9",
+                    "on-tertiary": "#3b2f00",
+                    "primary-fixed-dim": "#00dbe9",
+                    "outline": "#849495",
+                    "inverse-on-surface": "#313032",
+                    "surface-container-high": "#2a2a2c",
+                    "tertiary": "#fff5de",
+                    "secondary-fixed": "#f8d8ff",
+                    "error": "#ffb4ab",
+                    "on-primary-fixed": "#002022",
+                    "on-background": "#e5e1e4",
+                    "background": "#131315",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#eac324",
+                    "inverse-surface": "#e5e1e4",
+                    "on-secondary-container": "#fff6fc",
+                    "surface-variant": "#353437",
+                    "on-tertiary-container": "#715d00",
+                    "on-secondary-fixed-variant": "#74009f",
+                    "tertiary-fixed": "#ffe179",
+                    "outline-variant": "#3b494b",
+                    "inverse-primary": "#006970",
+                    "surface-container": "#201f21",
+                    "surface-container-low": "#1c1b1d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "margin-desktop": "80px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "section-gap": "120px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Sora"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-sm": ["Geist", "monospace"],
+                    "display-lg-mobile": ["Sora"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "display-lg": ["Sora"],
+                    "headline-md-mobile": ["Sora"]
+            },
+            "fontSize": {
+                    "headline-md": ["33px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-md-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow-primary {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+        }
+        .neon-glow-primary:hover {
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.6);
+        }
+        .neon-progress-head {
+            box-shadow: 0 0 8px #00f0ff;
+        }
+        body {
+            background-color: #131315;
+            color: #e5e1e4;
+            overflow-x: hidden;
+        }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface/10 backdrop-blur-xl border-b border-on-surface/10">
+<div class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">CYBERARdfghfghfghTIST</div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Portfolio</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Courses</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="px-6 py-2 rounded-sm border border-on-surface/20 text-on-surface hover:border-primary transition-all duration-300">Login</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-center pt-24 overflow-hidden">
+<!-- Abstract WebGL-style Background Overlay -->
+
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-6 space-y-stack-lg">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Next-Gen 3D Art Studio</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-tight">
+                    Biến Ý Tưởng Thành<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-secondary-container">Hiện Thực 3D</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Nâng tầm kỹ năng thiết kế chuyên nghiệp với các khóa học 3D chuyên sâu. Từ ý tưởng sơ khai đến những tác phẩm điện ảnh sống động nhất.
+                </p>
+<div class="flex flex-col sm:flex-row gap-stack-md pt-stack-sm">
+<button class="px-8 py-4 bg-primary-container text-on-primary-container font-headline-md text-headline-md-mobile rounded-sm flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 neon-glow-primary">
+                        Xem Portfolio
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="px-8 py-4 border border-on-surface/20 text-on-surface font-headline-md text-headline-md-mobile rounded-sm hover:bg-on-surface/5 transition-all duration-300">
+                        Khám phá khóa học
+                    </button>
+</div>
+</div>
+<div class="lg:col-span-6 relative mt-12 lg:mt-0">
+<div class="relative w-full aspect-square rounded-xl overflow-hidden glass-card p-2 group">
+<img alt="Featured 3D Work" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-700" data-alt="A cinematic 3D abstract render of glowing glass spheres and liquid metal structures suspended in a dark, atmospheric void. The scene is lit with vibrant cyan and violet neon accents, creating a high-tech minimalist aesthetic. Sharp details, realistic ray-tracing, and deep shadows emphasize the technical mastery and premium digital art style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB21rY_KeL47ovnTaEg6XWU6I0xQzCimDyjiVAGWJ4PUkYSaBHGb77-vhS-qTE8Ex93R9t62X4Mej2yxtZId2KfEXRjKbNKfOwo3E-B6QqxDj4NPVQ_Up-affBhTqBMxKvY16PoEzIE1fcKfTS6uMnaSP6myf6GdZVM_u8OVSaQlK5OculnkPbCZM58LKHY57uXOHjDJF9z8D-JJWrI92DJETq7cfqZ-xZIt7y31Mb3AJP-IqSojyIP7gKxYFVJjhAUA3ainQUP73rd"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-stack-lg">
+<div class="text-on-surface">
+<p class="font-label-sm text-label-sm text-primary uppercase">Current Focus</p>
+<h3 class="font-headline-md text-headline-md">Procedural Worlds v2.0</h3>
+</div>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary-container/20 blur-[80px] rounded-full"></div>
+<div class="absolute -bottom-10 -left-10 w-60 h-60 bg-primary-container/10 blur-[100px] rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Featured Portfolio Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg gap-stack-md">
+<div class="space-y-2">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-[0.2em]">Showcase</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Tác phẩm tiêu biểu</h2>
+</div>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary flex items-center gap-1 transition-colors group" href="#">
+                XEM TẤT CẢ <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
+</a>
+</div>
+<div class="masonry-grid">
+<!-- Project 1 -->
+<div class="group relative overflow-hidden glass-card rounded-xl">
+<div class="aspect-[4/5] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A hyper-realistic 3D render of a futuristic cyberpunk helmet with intricate mechanical details and glowing blue circuits. The character stands in a rainy, neon-lit alleyway with deep black shadows and soft purple ambient light. High contrast, atmospheric fog, and cinematic textures demonstrate high-end 3D character design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL784P4SsIYY7VW48CN8p-rcwpO0oKJU2Kawf3I1FX0xdDQ4FbSLbzkvmnF9mOUQZ5HC2gULcXstRf1SciBoGZfKzLIx5ghCI2r9Km6GVS2Ev7Z-Zn0mwdb5Sc3H-kPUwq9LaJRy-zvZQIiZdQb_pyMBo9YDDhdnuZB0n2zWTEDlqcOcN7_icJMKRH0PrjZf4ozJGPf8v28FOEqcbugB8FOpuCCzygep6iCSoHfuxKTh8o_Nx8PWJgyASBvr2B59S_QlyASmbaSWsY"/>
+</div>
+<div class="p-stack-md space-y-2">
+<div class="flex gap-2">
+<span class="px-2 py-1 rounded-sm bg-surface-container-highest font-label-sm text-label-sm text-primary uppercase">Octane</span>
+<span class="px-2 py-1 rounded-sm bg-surface-container-highest font-label-sm text-label-sm text-secondary uppercase">C4D</span>
+</div>
+<h3 class="font-headline-md text-headline-md-mobile text-on-surface">Cyber-Oni Mask</h3>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group relative overflow-hidden glass-card rounded-xl">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A minimalist architectural 3D visualization of a brutalist concrete structure floating over a serene, dark mirrored water surface. The lighting is cold and natural, highlighting the textures of raw concrete and glass. The composition is asymmetrical and modern, using a monochrome palette with subtle cyan reflections to maintain a high-tech atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdb0JaFvLy5D5FoBdPzn8Xjch_TzdNvZCpWoZLUbg6nNHZZy4qsX4q1MTWjIHKiq0KPkjuVBwVqaY3ZFHli0SUvHQ8IhCQT0SD2K2UhL_pGZtgSEW6N98U0wVRJS3-fWGnFsHup7zt6AUXkzYgQIS5RBzMsV7v8kydkEaMzw6sma3wevY1LwHi7KkjeBP3GlxugdNnAKuJKgeRSdWinnGkflbGcWibxIhsQVaUuqrJN0YN8W5hRyESIqIww5hqTWo6k8WLcpTTFcye"/>
+</div>
+<div class="p-stack-md space-y-2">
+<div class="flex gap-2">
+<span class="px-2 py-1 rounded-sm bg-surface-container-highest font-label-sm text-label-sm text-primary uppercase">Blender</span>
+<span class="px-2 py-1 rounded-sm bg-surface-container-highest font-label-sm text-label-sm text-tertiary-fixed-dim uppercase">Eevee</span>
+</div>
+<h3 class="font-headline-md text-headline-md-mobile text-on-surface">Brutalist Floating Void</h3>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group relative overflow-hidden glass-card rounded-xl">
+<div class="aspect-[4/5] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Intricate 3D generative art showing complex crystalline structures interlocking in a kaleidoscopic pattern. The material has a refractive, diamond-like quality, scattering light into a spectrum of neon cyan and magenta. The background is a solid deep black, making the glowing, light-emitting geometric art the sole focus of the premium digital gallery piece." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk3eTDoomBtBoK5oDHN3WjmlkVC9CYodd2erOchlaBS7rausQoQmciMirpmFQIY_qO1Ulq7bIqcBoUEf-mAQ8oEpHTf7X6bUblzFlAMsbMujl2B-jMumZ_omaSKOKcWT5_h61NM-atxnlwiYXvqLdFSsDnTcfh8iEcbA2bX3_w3lRIW3J7Ge_8YqeuA938kYkMTBcuNL9lTntI66Pk682SP_INC0ATqEcknqTPjI89RdLr3SKvgLK63SFSK0VU1xON2IdTjXeMcp20"/>
+</div>
+<div class="p-stack-md space-y-2">
+<div class="flex gap-2">
+<span class="px-2 py-1 rounded-sm bg-surface-container-highest font-label-sm text-label-sm text-primary uppercase">Houdini</span>
+<span class="px-2 py-1 rounded-sm bg-surface-container-highest font-label-sm text-label-sm text-on-secondary-fixed uppercase">Redshift</span>
+</div>
+<h3 class="font-headline-md text-headline-md-mobile text-on-surface">Crystalline Growth</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Courses Teaser Section -->
+<section class="py-section-gap bg-surface-container-lowest relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary-container/20 to-transparent"></div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="max-w-3xl mb-section-gap/2">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em] block mb-4">Academy</span>
+<h2 class="font-display-lg-mobile md:font-headline-md text-on-surface mb-stack-md">Khóa học nổi bật</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Làm chủ các công cụ 3D hàng đầu thông qua lộ trình từ cơ bản đến nâng cao. Học qua dự án thực tế và nhận phản hồi trực tiếp từ Mentor.
+                </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-stack-lg">
+<!-- Course Card 1 -->
+<div class="glass-card rounded-xl p-6 flex flex-col md:flex-row gap-stack-lg border border-primary/10 group hover:border-primary/30 transition-all duration-300">
+<div class="w-full md:w-1/3 aspect-video md:aspect-square rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional educational workspace for a 3D course, showing a high-end computer setup with a dual-monitor displaying a complex 3D character model in Cinema 4D. The room is dimly lit with atmospheric purple and cyan LED strips, creating a tech-focused, creative environment. The image feels aspirational and high-tech, perfect for a digital art educator." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHhHQzLq1VnVDNK9tgQgli772ii5Vq765T7XeqBQcoQ8ZQAveqmdQWX1owGUjpKnySWCcBmJgy6ylxbkap2UA6hU-iZSJX_1glp2IT74qtd-Ip7HQsloYpGxkdvm1GXfqtYA3c7Ji7xlxqd_NT1ysrdjaoKCL__hxB-g9alSrGd8RtX6iYr2bSq8046RlOLn1LqeWboD51waTyYEZ6s1NrUcBBGlBc7aXJq8bNOeAQc16xtWXdKT_nXpg6Co00s9q47x1pDoQ7Johu"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-2">
+<div class="space-y-2">
+<div class="flex justify-between items-start">
+<h4 class="font-headline-md text-headline-md-mobile text-on-surface">Cinema 4D Masterclass</h4>
+<span class="font-headline-md text-primary">$199</span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2">Làm chủ hoàn toàn Cinema 4D và Redshift từ con số 0 đến chuyên nghiệp.</p>
+</div>
+<div class="mt-4">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mb-2">
+<span>Tiến độ hoàn thành dự kiến</span>
+<span class="text-primary">85%</span>
+</div>
+<div class="relative w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="absolute left-0 top-0 h-full w-[85%] bg-primary shadow-[0_0_8px_rgba(0,240,255,0.5)] transition-all duration-1000"></div>
+</div>
+<div class="flex items-center gap-4 mt-4">
+<button class="text-primary font-label-sm text-label-sm flex items-center gap-1 hover:underline">
+                                    CHI TIẾT <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+<span class="text-on-surface-variant text-xs">• 24 Chapters</span>
+<span class="text-on-surface-variant text-xs">• 12h Content</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="glass-card rounded-xl p-6 flex flex-col md:flex-row gap-stack-lg border border-secondary/10 group hover:border-secondary/30 transition-all duration-300">
+<div class="w-full md:w-1/3 aspect-video md:aspect-square rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A 3D simulation of colorful abstract particles and smoke swirling in a vacuum, rendered with high-end procedural techniques in Houdini. The colors transition from warm gold to electric cyan. The lighting is cinematic, capturing fine dust particles and realistic fluid dynamics, symbolizing the technical mastery taught in advanced 3D visual effects courses." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7EcjNpg16SUxNldUv3bh2U0em1uwnNXr5WjnkdbwsxKXS8g2Pl95vh-hPNPQpHMuGNTBie3EPuW8Nv9iRL0y5yAH39888me2E9y8adn0vZIFGID_GgtUMTDbTR8v0bLlqMrGzB8eDB861PlWt24Hus_8Pdebplua86mKPLPdeymK5Iq03xGD4-iBGWZFeO_ypi4U0GYQKNw10eveAgrvGah0hXoBmDQGQid580HLBkAwfYAFudpsUC6euwWRa-ZEckuuYAU-91Vaw"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-2">
+<div class="space-y-2">
+<div class="flex justify-between items-start">
+<h4 class="font-headline-md text-headline-md-mobile text-on-surface">Houdini FX Fundamentals</h4>
+<span class="font-headline-md text-secondary">$249</span>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2">Khám phá thế giới procedural và kỹ xảo điện ảnh với Houdini.</p>
+</div>
+<div class="mt-4">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mb-2">
+<span>Độ khó</span>
+<span class="text-secondary">Advanced</span>
+</div>
+<div class="relative w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="absolute left-0 top-0 h-full w-[40%] bg-secondary shadow-[0_0_8px_rgba(182,0,248,0.5)] transition-all duration-1000"></div>
+</div>
+<div class="flex items-center gap-4 mt-4">
+<button class="text-secondary font-label-sm text-label-sm flex items-center gap-1 hover:underline">
+                                    CHI TIẾT <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+<span class="text-on-surface-variant text-xs">• 18 Chapters</span>
+<span class="text-on-surface-variant text-xs">• 15h Content</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-on-surface/10 py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-start gap-stack-lg mb-section-gap/2">
+<div class="space-y-stack-md">
+<div class="font-headline-md text-headline-md text-on-surface font-bold tracking-tighter uppercase">CYBERARTIST</div>
+<p class="text-on-surface-variant max-w-sm">Chuyên gia 3D Artist và Nhà đào tạo kỹ thuật số chuyên sâu. Kết nối sự sáng tạo và công nghệ.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-on-surface/10 flex items-center justify-center hover:border-primary text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-on-surface/10 flex items-center justify-center hover:border-primary text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">video_library</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-on-surface/10 flex items-center justify-center hover:border-primary text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-stack-lg">
+<div class="space-y-4">
+<h5 class="font-headline-md text-body-md text-on-surface">Sitemap</h5>
+<ul class="space-y-2 text-on-surface-variant text-sm">
+<li><a class="hover:text-primary" href="#">Portfolio</a></li>
+<li><a class="hover:text-primary" href="#">Khóa học</a></li>
+<li><a class="hover:text-primary" href="#">Cộng đồng</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-headline-md text-body-md text-on-surface">Legal</h5>
+<ul class="space-y-2 text-on-surface-variant text-sm">
+<li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary" href="#">Newsletter</a></li>
+</ul>
+</div>
+<div class="space-y-4 col-span-2 md:col-span-1">
+<h5 class="font-headline-md text-body-md text-on-surface">Newsletter</h5>
+<div class="relative">
+<input class="w-full bg-background border-b border-on-surface/20 py-2 focus:border-primary-container outline-none transition-colors" placeholder="Email của bạn" type="email"/>
+<button class="absolute right-0 bottom-2 text-primary">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-on-surface/5 flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant text-xs">
+<p>© 2024 CYBERARTIST Studio. All rights reserved.</p>
+<p>Designed for the future of 3D Art.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for mouse follow glow effect
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.glass-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>
